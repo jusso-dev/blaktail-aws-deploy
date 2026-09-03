@@ -1,0 +1,25 @@
+name = "blaktail"
+region = "ap-southeast-2"
+
+# ECR image URIs. Leave empty for the first apply; fill after build-images.sh.
+coord_image   = ""
+relay_image   = ""
+console_image = ""
+
+# Paste PEM content (or load from files with file() in a tfvars.json). Required.
+coord_tls_cert_pem = ""
+coord_tls_key_pem  = ""
+
+# Empty = HTTP-only console listener for the first launch.
+console_acm_certificate_arn = ""
+better_auth_url             = ""
+
+db_instance_class = "db.t4g.medium"
+db_multi_az       = true
+
+# Keep 0 for the first apply, run migration, then set >= 2.
+coord_desired_count = 0
+console_min_tasks   = 2
+console_max_tasks   = 6
+relay_min_tasks     = 1
+relay_max_tasks     = 1
