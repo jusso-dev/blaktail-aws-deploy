@@ -1,13 +1,19 @@
 # BlakTail AWS deploy
 
 Public buyer artifacts for self-hosting BlakTail in Sydney (`ap-southeast-2`).
-This repository is Terraform and instructions only. There is no hosted product
-and no marketplace image: you build the images from the public source repo and
-run them in your own AWS account. Your organisation holds the data, keys and logs.
+Two routes: subscribe on **AWS Marketplace** for a supported path with priority
+help (assisted deployment, hardening, monitoring), or run the Terraform below
+yourself for free. Either way there is no hosted product: BlakTail runs in your
+own AWS account, and your organisation holds the data, keys and logs.
 
+- Marketplace: search `BlakTail` on AWS Marketplace and subscribe, then deploy into your account
 - Source: <https://github.com/jusso-dev/BlakTail>
-- Landing site: set `PUBLIC_SITE_URL` when you publish it
+- Landing site: https://blaktail.yumait.au
 - License: Apache-2.0
+
+Marketplace purchases are reinvested into the product. Priority support covers
+assisted deployment into your AWS environment, hardening the configuration, and
+monitoring it with you.
 
 ## What it creates
 
