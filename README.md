@@ -76,8 +76,12 @@ against `coord_endpoint`. Approve each device fingerprint in the browser.
 
 ## Destroy
 
+RDS deletion protection is on by default (`db_deletion_protection = true`). To tear down,
+turn it off first, then destroy:
+
 ```sh
-terraform destroy -var-file=terraform.tfvars
+terraform apply -var-file=terraform.tfvars -var db_deletion_protection=false
+terraform destroy -var-file=terraform.tfvars -var db_deletion_protection=false
 ```
 
 Every run-scoped resource is tagged `Project = blaktail`. Verify in the console that
